@@ -49,7 +49,7 @@ export LDFLAGS="%{__global_ldflags}"
 
 %files
 %license LICENSE
-%doc README.md CHANGES.md AUTHORS.rst
+%doc README.md CHANGES.md AUTHORS.rst CONTRIBUTING.rst
 %{_libdir}/purple-2/lib%{plugin_name}.so
 
 %files -n pidgin-%{plugin_name}
