@@ -34,7 +34,7 @@ based messengers.
 
 %description -n pidgin-%{plugin_name}
 Adds pixmaps, icons and smileys for Matrix protocol implemented by
-purple-discord.
+purple-matrix.
 
 %prep
 %autosetup -n %{name}-%{commit0}
