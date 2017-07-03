@@ -9,7 +9,7 @@ Version: 0
 Release: 2.%{date}git%{shortcommit0}%{?dist}
 Summary: Matrix plugin for libpurple
 
-License: GPLv2
+License: GPLv2+
 URL: https://github.com/matrix-org/purple-matrix
 Source0: %{url}/archive/%{commit0}.tar.gz#/%{name}-%{shortcommit0}.tar.gz
 
