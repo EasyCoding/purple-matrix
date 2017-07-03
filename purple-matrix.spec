@@ -13,7 +13,7 @@ License: GPLv2+
 URL: https://github.com/matrix-org/purple-matrix
 Source0: %{url}/archive/%{commit0}.tar.gz#/%{name}-%{shortcommit0}.tar.gz
 
-# Pull request sent: https://github.com/matrix-org/purple-matrix/pull/48
+# Pull request sent: https://github.com/matrix-org/purple-matrix/pull/49
 Patch0: 0001-Respect-target-CFLAGS.patch
 
 BuildRequires: pkgconfig(json-glib-1.0)
