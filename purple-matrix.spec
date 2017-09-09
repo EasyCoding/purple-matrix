@@ -1,12 +1,12 @@
 %global plugin_name matrix
 
-%global commit0 be53d53c4f7e23d5b3532f56c59a3dfb82c9b38b
+%global commit0 f4ab17205797e255b789c52b39d21845c8b81fdb
 %global shortcommit0 %(c=%{commit0}; echo ${c:0:7})
-%global date 20170530
+%global date 20170902
 
 Name: purple-%{plugin_name}
 Version: 0
-Release: 4.%{date}git%{shortcommit0}%{?dist}
+Release: 6.%{date}git%{shortcommit0}%{?dist}
 Summary: Matrix plugin for libpurple
 
 License: GPLv2+
@@ -56,6 +56,12 @@ export LDFLAGS="%{__global_ldflags}"
 %{_datadir}/pixmaps/pidgin/protocols/*/%{plugin_name}.png
 
 %changelog
+* Sat Sep 09 2017 Vitaly Zaitsev <vitaly@easycoding.org> - 0-6.20170902gitf4ab172
+- Updated to latest snapshot.
+
+* Thu Aug 03 2017 Fedora Release Engineering <releng@fedoraproject.org> - 0-5.20170530gitbe53d53
+- Rebuilt for https://fedoraproject.org/wiki/Fedora_27_Binutils_Mass_Rebuild
+
 * Thu Jul 27 2017 Fedora Release Engineering <releng@fedoraproject.org> - 0-4.20170530gitbe53d53
 - Rebuilt for https://fedoraproject.org/wiki/Fedora_27_Mass_Rebuild
 
