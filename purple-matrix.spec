@@ -1,12 +1,12 @@
 %global plugin_name matrix
 
-%global commit0 ca2f214e252b2aa176a59b8b7e3f1b52e8df445e
+%global commit0 49ea988ce7ca75ae5ea6ae1384707cea4d6c4f35
 %global shortcommit0 %(c=%{commit0}; echo ${c:0:7})
-%global date 20180224
+%global date 20180325
 
 Name: purple-%{plugin_name}
 Version: 0
-Release: 8.%{date}git%{shortcommit0}%{?dist}
+Release: 9.%{date}git%{shortcommit0}%{?dist}
 Summary: Matrix plugin for libpurple
 
 License: GPLv2+
@@ -56,6 +56,9 @@ export LDFLAGS="%{__global_ldflags}"
 %{_datadir}/pixmaps/pidgin/protocols/*/%{plugin_name}.png
 
 %changelog
+* Wed Apr 04 2018 Vitaly Zaitsev <vitaly@easycoding.org> - 0-9.20180325git49ea988
+- Updated to latest snapshot.
+
 * Sun Feb 25 2018 Vitaly Zaitsev <vitaly@easycoding.org> - 0-8.20180224gitca2f214
 - Updated to latest snapshot.
 
