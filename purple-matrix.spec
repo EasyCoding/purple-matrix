@@ -40,12 +40,7 @@ purple-matrix.
 %autosetup -n %{name}-%{commit0}
 
 %build
-%if 0%{?fedora}
 %set_build_flags
-%else
-export CFLAGS="%{optflags}"
-export LDFLAGS="%{__global_ldflags}"
-%endif
 %make_build
 
 %install
