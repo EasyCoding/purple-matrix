@@ -6,7 +6,7 @@
 
 Name: purple-%{plugin_name}
 Version: 0
-Release: 9.%{date}git%{shortcommit0}%{?dist}
+Release: 10.%{date}git%{shortcommit0}%{?dist}
 Summary: Matrix plugin for libpurple
 
 License: GPLv2+
@@ -40,7 +40,8 @@ purple-matrix.
 %autosetup -n %{name}-%{commit0}
 
 %build
-%set_build_flags
+export CFLAGS="%{optflags}"
+export LDFLAGS="%{__global_ldflags}"
 %make_build
 
 %install
@@ -55,6 +56,9 @@ purple-matrix.
 %{_datadir}/pixmaps/pidgin/protocols/*/%{plugin_name}.png
 
 %changelog
+* Fri Jul 13 2018 Fedora Release Engineering <releng@fedoraproject.org> - 0-10.20180325git49ea988
+- Rebuilt for https://fedoraproject.org/wiki/Fedora_29_Mass_Rebuild
+
 * Wed Apr 04 2018 Vitaly Zaitsev <vitaly@easycoding.org> - 0-9.20180325git49ea988
 - Updated to latest snapshot.
 
