@@ -18,8 +18,11 @@ Patch0: 0001-Respect-target-CFLAGS.patch
 
 BuildRequires: pkgconfig(json-glib-1.0)
 BuildRequires: pkgconfig(glib-2.0)
+BuildRequires: pkgconfig(sqlite3)
 BuildRequires: pkgconfig(purple)
 BuildRequires: http-parser-devel
+BuildRequires: libgcrypt-devel
+BuildRequires: libolm-devel
 BuildRequires: gcc
 
 %package -n pidgin-%{plugin_name}
