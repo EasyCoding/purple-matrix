@@ -6,7 +6,7 @@
 
 Name: purple-%{plugin_name}
 Version: 0
-Release: 11.%{date}git%{shortcommit0}%{?dist}
+Release: 12.%{date}git%{shortcommit0}%{?dist}
 Summary: Matrix plugin for libpurple
 
 License: GPLv2+
@@ -59,6 +59,9 @@ export LDFLAGS="%{__global_ldflags}"
 %{_datadir}/pixmaps/pidgin/protocols/*/%{plugin_name}.png
 
 %changelog
+* Sat Jan 05 2019 Vitaly Zaitsev <vitaly@easycoding.org> - 0-12.20180927gitf26edd5
+- Rebuilt due to libolm update.
+
 * Wed Nov 21 2018 Vitaly Zaitsev <vitaly@easycoding.org> - 0-11.20180927gitf26edd5
 - Updated to latest snapshot.
 
