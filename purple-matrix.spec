@@ -25,6 +25,10 @@ BuildRequires: libgcrypt-devel
 BuildRequires: libolm-devel
 BuildRequires: gcc
 
+%if 0%{?rhel} && 0%{?rhel} == 8
+ExcludeArch: s390x
+%endif
+
 %package -n pidgin-%{plugin_name}
 Summary: Adds pixmaps, icons and smileys for Matrix protocol
 BuildArch: noarch
