@@ -1,17 +1,17 @@
 %global plugin_name matrix
 
-%global commit0 f26edd53ff81b21530d06e687ae223e15a015d79
+%global commit0 1d23385e6c22f63591fcbfc85c09999953c388ed
 %global shortcommit0 %(c=%{commit0}; echo ${c:0:7})
-%global date 20180927
+%global date 20191228
 
 Name: purple-%{plugin_name}
 Version: 0
-Release: 15.%{date}git%{shortcommit0}%{?dist}
+Release: 16.%{date}git%{shortcommit0}%{?dist}
 Summary: Matrix plugin for libpurple
 
 License: GPLv2+
-URL: https://github.com/matrix-org/purple-matrix
-Source0: %{url}/archive/%{commit0}.tar.gz#/%{name}-%{shortcommit0}.tar.gz
+URL: https://github.com/matrix-org/%{name}
+Source0: %{url}/archive/%{commit0}/%{name}-%{shortcommit0}.tar.gz
 
 # Pull request sent: https://github.com/matrix-org/purple-matrix/pull/49
 Patch0: 0001-Respect-target-CFLAGS.patch
@@ -43,8 +43,7 @@ purple-matrix.
 %autosetup -n %{name}-%{commit0}
 
 %build
-export CFLAGS="%{optflags}"
-export LDFLAGS="%{__global_ldflags}"
+%set_build_flags
 %make_build
 
 %install
@@ -59,6 +58,9 @@ export LDFLAGS="%{__global_ldflags}"
 %{_datadir}/pixmaps/pidgin/protocols/*/%{plugin_name}.png
 
 %changelog
+* Tue Apr 07 2020 Vitaly Zaitsev <vitaly@easycoding.org> - 0-16.20191228git1d23385
+- Updated to latest snapshot.
+
 * Thu Jan 30 2020 Fedora Release Engineering <releng@fedoraproject.org> - 0-15.20180927gitf26edd5
 - Rebuilt for https://fedoraproject.org/wiki/Fedora_32_Mass_Rebuild
 
