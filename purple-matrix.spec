@@ -6,7 +6,7 @@
 
 Name: purple-%{plugin_name}
 Version: 0
-Release: 16.%{date}git%{shortcommit0}%{?dist}
+Release: 17.%{date}git%{shortcommit0}%{?dist}
 Summary: Matrix plugin for libpurple
 
 License: GPLv2+
@@ -62,6 +62,9 @@ purple-matrix.
 %{_datadir}/pixmaps/pidgin/protocols/*/%{plugin_name}.png
 
 %changelog
+* Wed Apr 15 2020 Igor Raits <ignatenkobrain@fedoraproject.org> - 0-17.20191228git1d23385
+- Rebuild for http-parser 2.9.4
+
 * Tue Apr 07 2020 Vitaly Zaitsev <vitaly@easycoding.org> - 0-16.20191228git1d23385
 - Updated to latest snapshot.
 
