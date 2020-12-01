@@ -24,6 +24,7 @@ BuildRequires: http-parser-devel
 BuildRequires: libgcrypt-devel
 BuildRequires: libolm-devel
 BuildRequires: gcc
+BuildRequires: make
 
 %if 0%{?rhel} && 0%{?rhel} == 8
 ExcludeArch: s390x
